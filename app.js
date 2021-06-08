@@ -19,13 +19,14 @@ function roomAllotment(students, AV, BV, ANV, BNV, NA){
 }
 
 function main(students){
-    const maxRoomCapacity = Math.floor(students / 4);
+    const maxRoomCapacity = Math.floor(students.length / 4);
     const AV = new Queue(maxRoomCapacity);
     const BV = new Queue(maxRoomCapacity);
     const ANV = new Queue(maxRoomCapacity);
     const BNV = new Queue(maxRoomCapacity);
     const NA = new Queue();
     const result = roomAllotment(students, AV, BV, ANV, BNV, NA);
+    console.log(result);
 }
 
 
