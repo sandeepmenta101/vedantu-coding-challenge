@@ -27,6 +27,7 @@ function main(students){
     const NA = new Queue();
     const result = roomAllotment(students, AV, BV, ANV, BNV, NA);
     console.log(result);
+    document.querySelector('code').innerHTML = JSON.stringify(result);
 }
 
 
@@ -48,3 +49,7 @@ const studentFourteen = new Student(14, 'B', 'V');
 
 //Triggering main function
 main([studentOne, studentTwo, studentThree, studentFour, studentFive, studentSix, studentSeven, studentEight, studentNine, studentTen, studentEleven, studentTweleve, studentThirteen, studentFourteen]);
+
+document.querySelector('button').addEventListener('click', () => {
+    main([studentOne, studentTwo, studentThree, studentFour, studentFive, studentSix, studentSeven, studentEight, studentNine, studentTen, studentEleven, studentTweleve, studentThirteen, studentFourteen]);
+});
